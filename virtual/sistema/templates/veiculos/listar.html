@@ -1,0 +1,20 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Lista de veículos cadastrados</title>
+	</head>
+<body>
+	<ul>
+		{% for veiculo in object_list %}
+		<li>
+			<a href="/veiculos/{{veiculo.pk}}">
+				{{veiculo}}
+			</a>
+			<a href="/veiculos/excluir/{{veiculo.pk}}">
+				Apagar
+			</a>
+		</li>	
+		{% endfor %}
+	</ul>
+</body>
+</html>

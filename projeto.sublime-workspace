@@ -1,0 +1,632 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Vei",
+				"veiculos"
+			],
+			[
+				"i",
+				"import"
+			],
+			[
+				"d",
+				"django"
+			],
+			[
+				"Ve",
+				"Veiculo"
+			],
+			[
+				"V",
+				"Veiculo"
+			],
+			[
+				"me",
+				"meta	Tag"
+			],
+			[
+				"ve",
+				"veiculo"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"area",
+				"area-02"
+			],
+			[
+				"s",
+				"span	Tag"
+			],
+			[
+				"di",
+				"div	Tag"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"onc",
+				"onclick	Attr"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"avl",
+				"avl_print"
+			],
+			[
+				"av",
+				"avl_insert"
+			],
+			[
+				"n",
+				"novo"
+			],
+			[
+				"No",
+				"novo"
+			],
+			[
+				"A",
+				"AVL_Node"
+			],
+			[
+				"f",
+				"fb"
+			],
+			[
+				"T",
+				"TNO_AVL"
+			],
+			[
+				"c",
+				"CONTANOS"
+			],
+			[
+				"mai",
+				"maior"
+			],
+			[
+				"e",
+				"esq"
+			],
+			[
+				"x",
+				"X"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"N",
+				"NULL"
+			],
+			[
+				"de",
+				"delete"
+			],
+			[
+				"m",
+				"mostraremordem"
+			],
+			[
+				"P",
+				"Pessoa"
+			],
+			[
+				"b",
+				"buscaR"
+			],
+			[
+				"v",
+				"valor"
+			],
+			[
+				"E",
+				"esq"
+			],
+			[
+				"I",
+				"info"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"IN",
+				"int"
+			],
+			[
+				"filhoD",
+				"filhoDireita"
+			],
+			[
+				"filhoDE",
+				"filhoEsquerda"
+			],
+			[
+				"BU",
+				"buscaElemento"
+			],
+			[
+				"pess",
+				"Pessoa"
+			],
+			[
+				"t",
+				"this"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"end",
+				"endl"
+			],
+			[
+				"pes",
+				"Pessoa"
+			],
+			[
+				"en",
+				"endl"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"inseri",
+				"inserir"
+			],
+			[
+				"ma",
+				"main	main()"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "virtual/sistema/veiculos/admin.py",
+			"settings":
+			{
+				"buffer_size": 333,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "virtual/sistema/sistema/settings.py",
+			"settings":
+			{
+				"buffer_size": 3485,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "virtual/sistema/veiculos/apps.py",
+			"settings":
+			{
+				"buffer_size": 91,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "virtual/sistema/authentication/urls.py",
+			"settings":
+			{
+				"buffer_size": 128,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "virtual/sistema/sistema/urls.py",
+			"settings":
+			{
+				"buffer_size": 893,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/authentication",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/sistema",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/templates"
+	],
+	"file_history":
+	[
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/authentication/views.py",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/veiculos/models.py",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/manage.py",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/veiculos/views.py",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/sistema/urls.py",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/templates/authentication/login.html",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/templates/veiculos/editar.html",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/templates/veiculos/listar.html",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/sistema/wsgi.py",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/templates/veiculos/deletar.html",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/veiculos/forms.py",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/veiculos/admin.py",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/veiculos/urls.py",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/templates/veiculos/novo.html",
+		"/home/rosivania/Downloads/Regex/Regex.cpp",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/sistema/__init__.py",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/virtual/sistema/sistema/settings.py",
+		"/home/rosivania/Downloads/Regex/main.cpp",
+		"/home/rosivania/Downloads/Regex/Range.h",
+		"/media/rosivania/DADOS/2017 - DOCUMENTOS/UFT-CIÊNCIA DA COMPUTAÇÃO/COMPILADORES/02-AFN-MV/mainwindow.cpp",
+		"/home/rosivania/Documentos/UFT 2017.1/COMPUTACAO_GRAFICA/TRABALHOS/Computacao_Grafica/README.md",
+		"/home/rosivania/02-AFN-MV/nfa.cpp",
+		"/home/rosivania/Documentos/UFT 2017.1/COMPILADORES/TRABALHO2/Compiladores/exemplo_trabalho2/estado.h",
+		"/home/rosivania/Documentos/UFT 2017.1/COMPILADORES/TRABALHO2/Compiladores/exemplo_trabalho2/nfa.h",
+		"/home/rosivania/Documentos/UFT 2017.1/COMPILADORES/TRABALHO2/Compiladores/exemplo_trabalho2/nfa.cpp",
+		"/home/rosivania/Documentos/UFT 2017.1/COMPILADORES/TRABALHO2/Compiladores/exemplo_trabalho2/dfa.cpp",
+		"/home/rosivania/NetBeansProjects/02-AFN-MV/main.cpp",
+		"/home/rosivania/Documentos/UFT 2017.1/COMPILADORES/TRABALHO2/Compiladores/02-AFN-MV/main.cpp",
+		"/home/rosivania/build-02-AFN-MV-Desktop_Qt_5_8_0_GCC_64bit-Debug/Makefile",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/css/styles.css",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/aula1.html",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/aula-2.html",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/js/funcoes.js",
+		"/home/rosivania/Documentos/UFT 2017.1/COMPUTACAO_GRAFICA/Artigo - operações em imagens 2D/Template_PPGMCS/Template_PPGMCS.tex",
+		"/home/rosivania/Documentos/UFT 2017.1/COMPUTACAO_GRAFICA/ARTIGO/Template_PPGMCS.tex",
+		"/home/rosivania/Documentos/UFT 2017.1/COMPILADORES/TRABALHO1/infix.cpp",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/js/bootstrap.js",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/js/jquery.js",
+		"/home/rosivania/Documentos/PROGRAMACAO_COMERCIAL/programacao_comercial/aula1.sublime-project",
+		"/home/rosivania/avl_tree.h",
+		"/home/rosivania/Documentos/TRABALHO ED2/teste/teste2.c",
+		"/home/rosivania/Documentos/TRABALHO ED2/teste/teste.c",
+		"/home/rosivania/Documentos/TRABALHO ED2/teste/avl.h",
+		"/home/rosivania/Documentos/TRABALHO ED2/teste/avl.c",
+		"/home/rosivania/Documentos/TRABALHO ED2/avlteste.c",
+		"/home/rosivania/arvore.c",
+		"/home/rosivania/Documentos/TRABALHO ED2/avl.c",
+		"/home/rosivania/avl.c",
+		"/home/rosivania/Downloads/arvore_bin_ncurses.c",
+		"/home/rosivania/Documentos/TRABALHO ED2/teste3.c",
+		"/media/rosivania/DISK_IMG/TRABALHO/main.cpp",
+		"/media/rosivania/DISK_IMG/TRABALHO/BKP/teste3.c",
+		"/home/rosivania/Downloads/avl.c",
+		"/home/rosivania/ESTRUTURA DE DADOS/arvore_avl.c",
+		"/home/rosivania/ESTRUTURA DE DADOS/avl.c",
+		"/home/rosivania/Documentos/Estrutura-de-Dados-2/arvore.cpp",
+		"/home/rosivania/Documentos/Estrutura-de-Dados-2/veiculo.hpp",
+		"/home/rosivania/Documentos/Estrutura-de-Dados-2/orientacao_objeto.cpp",
+		"/home/rosivania/Pessoa.hpp",
+		"/home/rosivania/aula1.c",
+		"/home/rosivania/Estrutura-de-Dados-2/lista_encadeada.cpp",
+		"/home/rosivania/arvore (cópia).c",
+		"/home/rosivania/Documentos/Estrutura-de-Dados-2/lista_encadeada.cpp",
+		"/home/rosivania/arvore1.c",
+		"/home/rosivania/Documentos/Estrutura-de-Dados-2/Pessoa.hpp",
+		"/home/rosivania/Documentos/Estrutura-de-Dados-2/pessoa.hpp",
+		"/media/rosivania/DISK_IMG/IMPRIMIR maratona/Estrutura-de-Dados-2/Pessoa.hpp",
+		"/home/rosivania/Documentos/ESTRUTURA DE DADOS II/arvore.cpp"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"nivel",
+			"f_count",
+			"c_str",
+			"f_count",
+			"avl",
+			"lista",
+			"no_folha",
+			"cont",
+			"corrente"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "virtual/sistema/veiculos/admin.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								226,
+								226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "virtual/sistema/sistema/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3485,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								883,
+								883
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "virtual/sistema/veiculos/apps.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 91,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								91,
+								91
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "virtual/sistema/authentication/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								52,
+								52
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "virtual/sistema/sistema/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 893,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								893,
+								893
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "projeto.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 189.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
