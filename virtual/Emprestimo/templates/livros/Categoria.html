@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+  <!-- <h1>Bem vindo {{user.get_short_name}}</h1> -->
+  
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>Livros</h2>
+            </div>
+            <!-- Custom Content -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Listagem de Livros
+                                <small>Lista de livros cadastrados na plataforma</small>
+                            </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="body">
+                            <script type="text/javascript">
+                            $(document).ready(function() {
+                              $(".js-example-basic-single").select2();
+                            });
+                            </script>
+                             {% for livro in object_list %}
+                            <select class="js-example-basic-single">
+                              <option value="AL">{livro.categoria}</option>
+                            </select>
+                            {% endfor %}
+                                
+
+                            <div class="row">
+                            {% for livro in object_list %}
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                        {% if livro.image %}
+                                        <img src="{{livro.image.url}}">
+                                        {% else %}
+                                        <img src="{% static 'images/images.jpg' %}">
+                                        {% endif %}
+                                        <!-- <img src="http://placehold.it/500x300"> -->
+                                        <div class="caption">
+                                            <h3>{{livro.titulo}}</h3>
+                                            <p>
+                                                
+                                                {{livro.editora}}
+                                                <br>
+                                                {{livro.autor}}
+                                            </p>
+                                            <p>
+                                                <a href="javascript:void(0);" class="btn btn-primary waves-effect" role="button">SOLICITAR</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                 {% endfor %}
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Custom Content -->
+        </div>
+    </section>
+{% endblock content %}

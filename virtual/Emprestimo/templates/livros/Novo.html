@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>
+                    FORMULÁRIO DE CADASTRO
+                </h2>
+            </div>
+            <!-- Basic Validation -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>NOVO LIVRO</h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            
+                            <form id="form_validation" enctype="multipart/form-data" action="{% url 'livros:novo' %}" method="POST">
+                           
+                             {% csrf_token %}
+                               
+
+                               {% for campo in form %}
+                                <div class="form-group form-float">       
+                                        <label class="form-label">{{campo.label}}</label>
+                                        {{campo}}                 
+                                
+                                </div>
+                                {% endfor %}
+                                
+
+
+                                <div class="form-group">
+                                    <input type="checkbox" id="checkbox" name="checkbox">
+                                    <label for="checkbox">Li e aceito os termos de uso</label>
+                                </div>
+                                <button class="btn btn-primary waves-effect" type="submit">Enviar</button>
+                            </form>
+                        </div>  
+                </div>
+            </div>
+            <!-- #END# Basic Validation -->
+            <!-- #END# Validation Stats -->
+        </div>
+    </section>
+
+{% endblock content %}
+    
+{% block javascript %}
+     <!-- Jquery Validation Plugin Css -->
+    <script src="{% static "plugins/jquery-validation/jquery.validate.js"%}"></script>
+
+    <!-- JQuery Steps Plugin Js -->
+    <script src="{% static "plugins/jquery-steps/jquery.steps.js"%}"></script>
+
+    <!-- Sweet Alert Plugin Js -->
+    <script src="{% static "plugins/sweetalert/sweetalert.min.js"%}"></script>
+
+    <!-- Custom Js -->
+     <script src="{% static "AdminBSB/js/pages//forms/form-validation.js"%}"></script>
+ {% endblock %}  
