@@ -38,14 +38,27 @@
                               $(".js-example-basic-single").select2();
                             });
                             </script>
-                             {% for livro in object_list %}
                             <select class="js-example-basic-single">
-                              <option value="AL">{livro.categoria}</option>
+                             {% for livro in object_list %}
+                              <!-- <option value="AL">{{livro.categoria}}</option> -->
+                              <option value="{{livro.categoria}}">{{livro.categoria}}</option> 
+                              {% endfor %}
                             </select>
-                            {% endfor %}
+                            
+                           <!--   <select class="js-example-basic-single">
+                             {% for livro in object_list %}
+                              <option value="AL">{{livro.categoria}}</option>
+                              <option value="{{livro.categoria}}">{{livro.categoria}}</option> 
+                              {% endfor %}
+                            </select> -->
+                            <!-- <script type="text/javascript">
+                            $(document).ready(function() {
+                              $(".js-example-basic-single").select2();
+                            });
+                            </script> -->
+                            
                                 
-
-                            <div class="row">
+                           <!--  <div class="row">
                             {% for livro in object_list %}
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
@@ -55,7 +68,7 @@
                                         <img src="{% static 'images/images.jpg' %}">
                                         {% endif %}
                                         <!-- <img src="http://placehold.it/500x300"> -->
-                                        <div class="caption">
+                                        <!-- <div class="caption">
                                             <h3>{{livro.titulo}}</h3>
                                             <p>
                                                 
@@ -70,7 +83,7 @@
                                     </div>
                                 </div>
                                  {% endfor %}
-                            </div>
+                            </div> --> 
                             
                         </div>
 

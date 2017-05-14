@@ -14,7 +14,7 @@ class LivrosNew(CreateView):
     model = Livro 
     form_class = FormularioLivro
     template_name = 'livros/Novo.html'
-    success_url = reverse_lazy('listar')
+    success_url = reverse_lazy('listar-meus')
 
     def form_valid(self, form):
         form.instance.usuario = self.request.user
@@ -44,11 +44,20 @@ class LivrosList(ListView):
     View para listar os Livros
     """
     model = Livro 
-    #template_name = 'livros/listar.html'
     template_name = 'index.html'
     def get_queryset(self):
         return Livro.objects.exclude(usuario = self.request.user).order_by('titulo')
         #return Livro.objects.order_by('titulo')
+
+class LivrosListar(ListView):
+    """
+    View para listar os Livros do usuário
+    """
+    model = Livro 
+    template_name = 'livros/Listar.html'
+    def get_queryset(self):
+        return Livro.objects.filter(usuario=self.request.user).order_by('titulo')
+        
 
 class LivrosListarCategoria(ListView):
     """

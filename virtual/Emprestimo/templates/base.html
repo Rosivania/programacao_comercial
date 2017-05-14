@@ -53,7 +53,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="../../index.html">SISE - SISTEMA DE EMPRESTIMO</a>
+                <a class="navbar-brand" href="{% url 'livros:listar' %}">Passos para a Leitura</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -89,7 +89,7 @@
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    <img src="../../images/user.png" width="48" height="48" alt="User" />
+                    <img src="{% static 'AdminBSB/images/account.png' %}" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user}}</div>
@@ -99,11 +99,11 @@
                         <ul class="dropdown-menu pull-right">
                             <li><a href="javascript:void(0);"><i class="material-icons">person</i>Perfil</a></li>
                             <li role="seperator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">group</i>Seguidores</a></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Produtos</a></li>
+                            <!-- <li><a href="javascript:void(0);"><i class="material-icons">group</i>Seguidores</a></li> -->
+                            <li><a href="{% url 'livros:listar-meus' %}"><i class="material-icons">book</i>Livros</a></li>
                             
                             <li role="seperator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sair</a></li>
+                            <li><a href="sair/"><i class="material-icons">input</i>Sair</a></li>
                         </ul>
                     </div>
                 </div>
@@ -120,25 +120,21 @@
                         </a>
                     </li>
                     
-                    <li>
+                   <!--  <li>
                         <a href="../../pages/helper-classes.html">
                             <i class="material-icons">layers</i>
                             <span>Ajuda</span>
                         </a>
-                    </li>
-                    
-                    <li class="active">
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">swap_calls</i>
-                            <span>Solicitar Troca</span>
-                        </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>
-                            <span>Livros</span>
+                            <span>Meus Livros</span>
                         </a>
                         <ul class="ml-menu">
+                            <li>
+                                <a href="{% url 'livros:listar-meus' %}">Listar Livros</a>
+                            </li>
                             <li>
                                 <a href="{% url 'livros:novo' %}">Cadastrar Livros</a>
                             </li>
@@ -150,12 +146,22 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="active">
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">swap_calls</i>
+                            <span>Solicitar Troca</span>
+                        </a>
+                    </li>
+                    
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">view_list</i>
                             <span>Lista de Livros</span>
                         </a>
                         <ul class="ml-menu">
+                             <li>
+                                <a href="{% url 'livros:listar' %}">Listar todos</a>
+                            </li>
                             <li>
                                 <a href="{% url 'livros:categoria' %}">Por categoria</a>
                             </li>
@@ -164,7 +170,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">perm_media</i>
                             <span>Medias</span>
@@ -177,7 +183,7 @@
                                 <a href="{% static "templates/medias/carousel.html"%}">Carousel</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- #Menu -->
