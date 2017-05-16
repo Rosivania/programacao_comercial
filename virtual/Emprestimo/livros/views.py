@@ -9,7 +9,7 @@ from livros.models import *
 
 class LivrosNew(CreateView):
     """
-    View para criação de novos livros
+    View para cadastro de novos livros
     """
     model = Livro 
     form_class = FormularioLivro
@@ -28,7 +28,7 @@ class LivrosEdit(UpdateView):
     model = Livro 
     form_class = FormularioLivro
     template_name = 'livros/Editar.html'
-    success_url = reverse_lazy('editar')
+    success_url = reverse_lazy('listar')
 
 
 class LivrosDelete(DeleteView):
