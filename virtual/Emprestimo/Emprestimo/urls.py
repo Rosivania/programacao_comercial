@@ -4,6 +4,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from autenticacao import views
 
+from livros.views import NotFoundView
+
+handler404 = NotFoundView.get_rendered_view()
+
 admin.autodiscover()
 
 urlpatterns = [

@@ -7,6 +7,6 @@ class FormularioLivro(forms.ModelForm):
     """
     class Meta:
         model = Livro
-        exclude = ['usuario']
+        exclude = ['usuario','disponivel']
     def __init__(self, *args, **kwargs):
         super(FormularioLivro, self).__init__(*args, **kwargs)

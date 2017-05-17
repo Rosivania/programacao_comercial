@@ -16,6 +16,7 @@ class Livro(models.Model):
     image = models.ImageField('Imagem',upload_to='livros', blank=True)
     #added_by = models.ForeignKey(User, null=True, blank=True)
     usuario = models.ForeignKey(User, related_name='livros')
+    disponivel = models.BooleanField(default=True)
     def __str__(self):
     	return '{0} - {1} - {2} - {3} - {4} - {5} - {6}'.format(
             self.titulo, 

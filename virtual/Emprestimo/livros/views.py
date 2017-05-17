@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import View, ListView, CreateView
 from django.views.generic.edit import DeleteView, UpdateView
+from django.views.generic import TemplateView
 from django.db.models import Q
 from django.core.urlresolvers import reverse
 from django.urls import reverse_lazy 
@@ -49,7 +50,8 @@ class LivrosList(ListView):
     model = Livro 
     template_name = 'index.html'
     def get_queryset(self):
-        return Livro.objects.exclude(usuario = self.request.user).order_by('titulo')
+        return Livro.objects.exclude(usuario = self.request.user).filter(
+            disponivel ='True').order_by('titulo')
         #return Livro.objects.order_by('titulo')
 
 class LivrosListar(ListView):
@@ -97,3 +99,19 @@ class LivrosListarCategoria(ListView):
         #categoria = self.request.GET.get('categoria')
         categorias = self.request.GET.getlist('categoria')
         return Livro.objects.exclude(usuario = self.request.user).filter(categoria__in=categorias).order_by('titulo')
+
+
+class NotFoundView(TemplateView):
+    template_name = "404.html"
+
+    @classmethod
+    def get_rendered_view(cls):
+        as_view_fn = cls.as_view()
+
+        def view_fn(request):
+            response = as_view_fn(request)
+            # this is what was missing before
+            response.render()
+            return response
+
+        return view_fn
