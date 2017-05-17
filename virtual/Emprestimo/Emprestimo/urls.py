@@ -14,6 +14,7 @@ urlpatterns = [
 	url(r'^',include('autenticacao.urls', namespace = 'autenticacao-login')),
     #url(r'^produtos/', include('produtos.urls')),
     url(r'^livros/', include('livros.urls')),
+    url(r'^solicitacao/', include('solicitacao.urls')),
     url(r'^admin/', admin.site.urls),
 ]
 

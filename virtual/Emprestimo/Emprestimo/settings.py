@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'autenticacao.apps.AutenticacaoConfig',
     'livros.apps.LivrosConfig',
+    'solicitacao.apps.SolicitacaoConfig',
     'produtos.apps.ProdutosConfig',
     'django.contrib.admin',
     'django.contrib.auth',
