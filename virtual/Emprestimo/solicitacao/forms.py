@@ -8,6 +8,5 @@ class FormularioSolicitacao(forms.ModelForm):
     class Meta:
         model = Solicitacao
         exclude = [ 'usuario_solicitado', 'usuario_solicitante','data_devolucao','devolvido']
-        #'data_emprestimo','data_devolucao', 'devolvido', 'usuario_emprestimo', 'usuario_devolucao'
     def __init__(self, *args, **kwargs):
         super(FormularioSolicitacao, self).__init__(*args, **kwargs)

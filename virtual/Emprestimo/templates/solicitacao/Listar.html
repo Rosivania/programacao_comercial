@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-
-     <section class="content">
+    <section class="content">
         <div class="container-fluid">
             <div class="block-header">
                 <h2>Livros</h2>
@@ -13,12 +12,14 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Solicitação de Livros
-                                <small>Confirmação de empréstimo</small>
+                                Listagem de Livros
+                                <small>Lista dos livros solicitados na plataforma</small>
                             </h2>
                         </div>
                         <div class="body">
                             <div class="row">
+                            {% if object_list %}
+                            {% for solicitacao in object_list %}
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
                                         {% if solicitacao.livro_solicitado.image %}
@@ -27,19 +28,23 @@
                                         <img src="{% static 'images/images.jpg' %}">
                                         {% endif %}
                                         <div class="caption">
-                                        <h3>{{solicitacao.livro_solicitado.titulo}}</h3>
-                                            
-                                            <p>Usuário Solicitado {{solicitacao.usuario_solicitado}}</p>       
+                                            <h6>Data do empréstimo: {{solicitacao.data_emprestimo}}</h6>
+                                            <h7><b>Livro:</b> {{solicitacao.livro_solicitado.all|join:", "|linebreaks}} </h7>
                                             <p>
-                                                <a href="{% url 'livros:listar' %}" class="btn btn-primary waves-effect" role="button">SOLICITAR</a>
-                                            </p>
+                                                <a href="{% url 'solicitacao:devolucao'%}?solicitacao={{solicitacao.id}}" class="btn btn-primary waves-effect" role="button">Devolver</a>    
+                                            </p>                                           
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                        </div>
+                                 {% endfor %}
+                                 {% else %}
+                                
+                                <h2>Você não possue registro de livros solicitados</h2>
 
+                                {% endif %}
+
+                            </div>                           
+                        </div>
                     </div>
                 </div>
             </div>

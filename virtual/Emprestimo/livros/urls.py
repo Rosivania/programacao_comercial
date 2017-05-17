@@ -9,5 +9,6 @@ urlpatterns = [
 	 url(r'^buscar/$', views.LivrosBuscar.as_view(), name='buscar'),
 	 url(r'^(?P<pk>\d+)/$', views.LivrosEdit.as_view(), name='editar'),
 	 url(r'^deletar/(?P<pk>\d+)/$', views.LivrosDelete.as_view(), name='deletar'),
+	 url(r'^disponivel/(?P<pk>\d+)/$', views.LivrosDisponivel.as_view(), name='disponivel'),
 	 #url(r'^(?P<categoria>[\w-]+)$',views.ProdutosListarCategoria.as_view(), name = 'listar-produtos-categoria'),
 ]

@@ -9,8 +9,6 @@ from livros.forms import *
 from livros.models import *
 
 
-
-
 class LivrosNew(CreateView):
     """
     View para cadastro de novos livros
@@ -23,6 +21,18 @@ class LivrosNew(CreateView):
     def form_valid(self, form):
         form.instance.usuario = self.request.user
         return super(LivrosNew, self).form_valid(form)
+
+class LivrosDisponivel(UpdateView):
+    """
+    View para alterar o status do livro para disponível
+    """
+    model = Livro
+    form_class = FormularioLivro
+    template_name = 'livros/EditarStatus.html'
+    success_url = reverse_lazy('livros:listar-meus') 
+    def form_valid(self, form):
+        form.instance.disponivel = 'True'
+        return super(LivrosDisponivel, self).form_valid(form)
 
 
 class LivrosEdit(UpdateView):
@@ -45,7 +55,7 @@ class LivrosDelete(DeleteView):
 
 class LivrosList(ListView):
     """
-    View para listar os Livros
+    View para listar os Livros disponíveis para empréstimo
     """
     model = Livro 
     template_name = 'index.html'
@@ -56,7 +66,7 @@ class LivrosList(ListView):
 
 class LivrosListar(ListView):
     """
-    View para listar os Livros do usuário
+    View para listar os Livros do usuário atual
     """
     model = Livro 
     template_name = 'livros/Listar.html'

@@ -1,28 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.core.urlresolvers import reverse_lazy
 from django.views.generic import View, ListView, CreateView, UpdateView, DeleteView, DetailView
 from solicitacao.models import Solicitacao
 from solicitacao.forms import *
 from livros.models import *
 from livros.forms import *
-from django.db.models import Q
-from django.core.urlresolvers import reverse_lazy
-
-
-# class SolicitacaoNew(CreateView):
-#     """
-#     View para cadastro de novos livros
-#     """
-#     model = Solicitacao 
-#     form_class = FormularioSolicitacao
-#     template_name = 'solicitacao/Novo.html'
-#     success_url = reverse_lazy('livros:listar-meus')
-
-#     def form_valid(self, form):
-#         form.instance.usuario_solicitante = self.request.user
-#         form.instance.usuario_solicitado = self.request.user.livros
-#         return super(SolicitacaoNew, self).form_valid(form)
+from datetime import datetime
+#from django.db.models import Q
 
 class SolicitacaoNew(CreateView):
+	"""
+	View para solicitar emprestimos de livros.
+	"""
 	model = Solicitacao
 	form_class = FormularioSolicitacao
 	template_name = 'solicitacao/Novo.html'
@@ -32,35 +21,58 @@ class SolicitacaoNew(CreateView):
 		livro = Livro.objects.get(id=livro_id)
 		form.instance.usuario_solicitante = self.request.user
 		form.instance.usuario_solicitado = livro.usuario
+		#form.instance.livro_solicitado = livro_id
 		livro.disponivel = 'False'
 		livro.save()
 		return super(SolicitacaoNew, self).form_valid(form)
 
-		
-	#def get(self, request):
+class SolicitacaoList(ListView):
+	"""
+	View para listar emprestimos cadastrados/pendentes.
+	"""
+	model = Solicitacao
+	template_name = 'solicitacao/Listar.html'
+	def get_queryset(self):
+		return Solicitacao.objects.filter(usuario_solicitante=self.request.user).exclude(devolvido='True')
 
-	# 	livro_id = self.request.GET.get('livro', '')
+class Devolucao(View):
+	"""
+	View para devolver livros solicitados. 
+	"""
+	def get(self, request):
+		solicitacao_id = self.request.GET.get('solicitacao',0)
+		solicitacao = Solicitacao.objects.get(id=solicitacao_id)
+		solicitacao.devolvido = 'True'
+		solicitacao.data_devolucao = datetime.now()
+		solicitacao.save()
+		return redirect(reverse_lazy('livros:listar'))
 
-	# 	livro = Livro.objects.get(id=livro_id)
-	# 	usuario_solicitante_id = self.request.GET.get('usuario_solicitante_id','')
- #        usuario = User.objects.get(id=usuario_solicitante_id)
-	# 	livro_solicitado = livro
-	# 	usuario_solicitado = livro.usuario
-	# 	usuario_solicitante = usuario
-	# 	livro_solicitado.save()
-	# 	usuario_solicitado_id.save()
-	# 	usuario_solicitante_id.save()
 
-	# 	# solicitacao = Solicitacao(
-	# 	# 	livro_solicitado=livro,
-	# 	# 	usuario_solicitante_id=self.request.user,
-	# 	# 	usuario_solicitado_id=livro.usuario,
-	# 	# )
-	# 	# solicitacao.save()
+# class SolicitacaoListar(ListView):
+#     """
+#     View para listar os Livros 
+#     """
+#     model = Livro 
+#     template_name = 'index.html'
+#     def get_queryset(self):
+#         return Solicitacao.objects.exclude(usuario_solicitante = self.request.user).filter(
+#             devolvido ='True').order_by('titulo')
 
-	# 	context = {
-	# 		'livro_solicitado': livro_solicitado,
-	# 		'usuario_solicitado_id': usuario_solicitado_id,
-	# 		'usuario_solicitante_id': usuario_solicitante_id,
-	# 	}
-	# 	return render(request, 'solicitacao/solicitar.html',context)
+# class Devolver(UpdateView):
+# 	"""
+# 	View para editar solicitação de empréstimo de livros. 
+# 	"""
+# 	model = Solicitacao
+# 	form_class = FormularioSolicitacao
+# 	template_name = 'solicitacao/Editar.html'
+# 	success_url = reverse_lazy('livros:listar')	
+# 	def form_valid(self, form):
+# 		livro_id = self.request.GET.get('livro', '')
+# 		livro = Livro.objects.get(id=livro_id)
+# 		form.instance.usuario_solicitante = self.request.user
+# 		form.instance.usuario_solicitado = livro.usuario
+# 		form.instance.devolvido = 'True'
+# 		livro.disponivel = 'True'
+# 		livro.save()
+# 		return super(Devolver, self).form_valid(form)	
+

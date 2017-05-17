@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>HOME | Sistema de Emprestimo</title>
+    <title>HOME | Sistema de Emprestimo de Livros</title>
     {% load staticfiles %}
     <!-- Favicon-->
     <link rel="icon" href="{% static "AdminBSB/favicon.ico" %}"/>  
@@ -63,21 +63,21 @@
                     <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
                     <!-- #END# Call Search -->
                     <!-- Notifications -->
-                    <li class="dropdown">
+                    <!-- <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
                             <i class="material-icons">notifications</i>
                             <span class="label-count">0</span>
                         </a>
                         
-                    </li>
+                    </li> -->
                     <!-- #END# Notifications -->
                     <!-- Tasks -->
-                    <li class="dropdown">
+                    <!-- <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
                             <i class="material-icons">flag</i>
                             <span class="label-count">0</span>
                         </a>
-                    </li>
+                    </li> -->
                     <!-- #END# Tasks -->
                     <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
                 </ul>
@@ -99,7 +99,7 @@
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>Perfil</a></li>
+                            <!-- <li><a href="javascript:void(0);"><i class="material-icons">person</i>Perfil</a></li> -->
                             <li role="seperator" class="divider"></li>
                             <!-- <li><a href="javascript:void(0);"><i class="material-icons">group</i>Seguidores</a></li> -->
                             <li><a href="{% url 'livros:listar-meus' %}"><i class="material-icons">book</i>Livros</a></li>
@@ -115,7 +115,7 @@
             <div class="menu">
                 <ul class="list">
                     <li class="header">MENU PRINCIPAL</li>
-                    <li>
+                    <li class="active">
                         <a href="{% url 'livros:listar' %}">
                             <i class="material-icons">home</i>
                             <span>Home</span>
@@ -143,28 +143,29 @@
                             
                         </ul>
                     </li>
-                    <li class="active">
-                        <a href="javascript:void(0);" class="menu-toggle">
+                    <li>
+                    <!-- <li class="active"> -->
+                        <a href="{% url 'solicitacao:listar' %}" class="menu-toggle">
                             <i class="material-icons">swap_calls</i>
-                            <span>Solicitar Troca</span>
+                            <span>Acompanhar Empréstimo</span>
                         </a>
                     </li>
                     
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">view_list</i>
-                            <span>Lista de Livros</span>
+                            <span>Empréstimo de Livros</span>
                         </a>
                         <ul class="ml-menu">
                              <li>
-                                <a href="{% url 'livros:listar' %}">Listar todos</a>
+                                <a href="{% url 'livros:listar' %}">Listar livros</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="{% url 'livros:categoria' %}">Por categoria</a>
                             </li>
                             <li>
                                 <a href="../../pages/tables/jquery-datatable.html">Por autor</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <!-- <li>
@@ -200,7 +201,7 @@
         <aside id="rightsidebar" class="right-sidebar">
             <ul class="nav nav-tabs tab-nav-right" role="tablist">
                 <li role="presentation" class="active"><a href="#skins" data-toggle="tab">SKINS</a></li>
-                <li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li>
+               <!--  <li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li> -->
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active in active" id="skins">

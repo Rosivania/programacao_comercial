@@ -32,7 +32,15 @@
                                             <p> {{livro.editora}}</p>
                                             <p>
                                                 <a href="{% url 'livros:editar' livro.id %}" class="btn btn-primary waves-effect" role="button">Editar</a>
+
                                                  <a href="{% url 'livros:deletar' livro.id %}" class="btn btn-primary waves-effect" role="button">Excluir</a>
+                                            </p>
+                                            <p>
+                                                {% if livro.disponivel %}
+                                                
+                                                {% else %}
+                                                <a href="{% url 'livros:disponivel' livro.id %}" class="btn btn-primary waves-effect" role="button">Disponibilizar</a>
+                                                {% endif %}
                                             </p>                                           
                                         </div>
                                     </div>

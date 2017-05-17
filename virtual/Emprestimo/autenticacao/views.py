@@ -2,9 +2,9 @@
 from django.views.generic import View
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.urls import reverse_lazy
 #from django.contrib.auth.mixins import LoginRequiredMixin
 #from django.contrib.auth.models import User
-from django.urls import reverse_lazy
 
 
 class Autenticacao(View):
@@ -16,7 +16,7 @@ class Autenticacao(View):
 		if self.request.user.is_authenticated():
 			return redirect('/livros')
 			#return render(request, 'index.html',context )
-			#return redirect(reverse_lazy('listar'))
+			#return redirect(reverse_lazy('livros:listar'))
 		return render(request, 'autenticacao/login.html', context)
 
 	def post(self, request):
@@ -30,7 +30,6 @@ class Autenticacao(View):
 		    #return render(request, 'index.html', context)
 		else:
 		    context.update(message='Login ou Senha incorreto(s)')
-		    #resposta['mensagem'] = 'Login ou Senha incorreto(s)'
 
 		return render(request, 'autenticacao/login.html', context)
 
