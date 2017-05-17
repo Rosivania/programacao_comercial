@@ -40,8 +40,10 @@
     <div class="search-bar">
         <div class="search-icon">
             <i class="material-icons">search</i>
-        </div>
-        <input type="text" placeholder="INICIAR BUSCA...">
+        </div> 
+        <form action="{% url 'livros:buscar' %}?filtro" method="get">
+            <input type="text" placeholder="DIGITE SUA BUSCA..." name="filtro" class="validate">
+        </form>
         <div class="close-search">
             <i class="material-icons">close</i>
         </div>
